@@ -1,7 +1,7 @@
 {
   "name": "ember-cli-filesize-transform",
   "version": "0.0.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "description": "A simple Ember Data Transform to alow easier manipulations of filesize. Simply have the backend send a value in bytes and the transform will create an easy to use object.",
   "directories": {
     "doc": "doc",
     "test": "tests"
@@ -11,11 +11,11 @@
     "build": "ember build",
     "test": "ember try:testall"
   },
-  "repository": "",
+  "repository": "https://github.com/terrawheat/ember-cli-filesize-transform",
   "engines": {
     "node": ">= 0.10.0"
   },
-  "author": "",
+  "author": "Matt Wheatley <terrawheat@gmail.com>",
   "license": "MIT",
   "devDependencies": {
     "broccoli-asset-rev": "^2.0.2",
@@ -37,7 +37,10 @@
     "eslint-config-ember": "0.0.5"
   },
   "keywords": [
-    "ember-addon"
+    "ember-addon",
+    "ember-data",
+    "transform",
+    "file size"
   ],
   "dependencies": {
     "ember-cli-babel": "^5.0.0"

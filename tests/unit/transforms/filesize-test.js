@@ -6,7 +6,8 @@ moduleFor('transform:filesize', 'Unit | Service | filesize', {
 });
 
 // Replace this with your real tests.
-test('it exists', function(assert) {
+test('it exists', function (assert) {
   var transform = this.subject();
+
   assert.ok(transform);
 });

@@ -33,6 +33,6 @@ export default Ember.Object.extend({
   }),
   pbWithUnits: Ember.computed('bytes', function () {
     return this.get('pb') + ' PB';
-  }),
+  })
 
 });

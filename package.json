@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-filesize-transform",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "A simple Ember Data Transform to alow easier manipulations of filesize. Simply have the backend send a value in bytes and the transform will create an easy to use object.",
   "directories": {
     "doc": "doc",

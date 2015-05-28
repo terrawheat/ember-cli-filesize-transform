@@ -1,0 +1,1 @@
+export { default } from 'ember-cli-filesize-transform/transforms/filesize';

@@ -33,6 +33,8 @@ Then within templates
 
 All above methods can have `withUnits` attached (i.e., `mbWithUnits`) which will output `10 MB`.
 
+* [NEW] - The method `humanReadable` is now available which will attempt to work out which unit to use based on the number of bytes.
+
 ## License
 
 The MIT License (MIT)

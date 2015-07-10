@@ -19,6 +19,9 @@ export default Ember.Object.extend({
     return this.get('bytes') / Math.pow(1000, 5);
   }),
 
+  bytesWithUnits: Ember.computed('bytes', function () {
+    return this.get('kb') + ' B';
+  }),
   kbWithUnits: Ember.computed('bytes', function () {
     return this.get('kb') + ' KB';
   }),
@@ -33,6 +36,23 @@ export default Ember.Object.extend({
   }),
   pbWithUnits: Ember.computed('bytes', function () {
     return this.get('pb') + ' PB';
+  }),
+
+  humanReadable: Ember.computed('bytes', function () {
+    var sizes = ['bytes', 'kb', 'gb', 'tb', 'pb'];
+    var that = this;
+    var result;
+
+    sizes.some(function (size) {
+      if (that.get(size) < 1000) {
+        result = size;
+        return true;
+      }
+
+      return false;
+    });
+
+    return this.get(result + 'WithUnits');
   })
 
 });

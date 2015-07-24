@@ -9,6 +9,10 @@ export default DS.Transform.extend({
   },
 
   serialize: function (deserialized) {
-    return deserialized.get('bytes');
+    if (deserialized) {
+      return deserialized.get('bytes');
+    }
+
+    return 0;
   }
 });

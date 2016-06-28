@@ -3,20 +3,21 @@ import Ember from 'ember';
 export default Ember.Object.extend({
   bytes: 0,
 
+
   kb: Ember.computed('bytes', function () {
-    return this.get('bytes') / 1000;
+    return (this.get('bytes') / 1000).toFixed(2);
   }),
   mb: Ember.computed('bytes', function () {
-    return this.get('bytes') / Math.pow(1000, 2);
+    return (this.get('bytes') / Math.pow(1000, 2)).toFixed(2);
   }),
   gb: Ember.computed('bytes', function () {
-    return this.get('bytes') / Math.pow(1000, 3);
+    return (this.get('bytes') / Math.pow(1000, 3)).toFixed(2);
   }),
   tb: Ember.computed('bytes', function () {
-    return this.get('bytes') / Math.pow(1000, 4);
+    return (this.get('bytes') / Math.pow(1000, 4)).toFixed(2);
   }),
   pb: Ember.computed('bytes', function () {
-    return this.get('bytes') / Math.pow(1000, 5);
+    return (this.get('bytes') / Math.pow(1000, 5)).toFixed(2);
   }),
 
   bytesWithUnits: Ember.computed('bytes', function () {
@@ -39,7 +40,7 @@ export default Ember.Object.extend({
   }),
 
   humanReadable: Ember.computed('bytes', function () {
-    var sizes = ['bytes', 'kb', 'gb', 'tb', 'pb'];
+    var sizes = ['bytes', 'kb', 'mb', 'gb', 'tb', 'pb'];
     var that = this;
     var result;
 
